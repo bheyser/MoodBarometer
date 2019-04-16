@@ -1,0 +1,33 @@
+<!-- language file start -->
+privacy_link#:#Datenschutz
+survey_link#:#Umfrage
+config_tab#:#Konfiguration
+report_tab#:#Bericht
+report_detailed_subtab#:#Stimmungserfassungen
+report_aggregated_subtab#:#Durchschnittsstimmung
+config_modified#:#Konfiguration wurde geändert.
+selection_freeze_input#:#Blockierung der ersten Stimmungserfassung
+selection_freeze_input_info#:#Diese Option führt dazu, dass nach der ersten Stimmungserfassung je Kalenderwoche die Auswahl von den Benutzern nicht mehr verändert werden kann.
+privacy_category_input#:#Datenschutz Kategorie
+privacy_category_input_info#:#Die ausgewählte Kategorie wird allen Benutzern als Datenschutz Link zum Verfügung gestellt.
+privacy_category_select_advice#:#Bitte wählen Sie die Kategorie, welche die Informationen zum Datenschutz bereit hält.
+superiors_survey_input#:#Umfrage für Vorgesetzte
+superiors_survey_input_info#:#Die ausgewählte Umfrage wird den Benutzern zur Verfügung gestellt, welche als Vorgesetzte erkannt werden.
+superiors_survey_select_advice#:#Bitte wählen Sie die Umfrage, welche von Vorgesetzten durchzuführen ist.
+superiors_role_input#:#Rolle der Vorgesetzten
+superiors_role_input_info#:#Den Benutzern, welche dieser Rolle angehören, wird ein Link zur konfigurierten Umfrage für Vorgesetzte gezeigt.
+superiors_role_invalid_alert#:#Der eingebene Rollenname ist keine gültige globale ILIAS Rolle.
+department_roles_input#:#Rollen der Standorte
+department_roles_input_info#:#Die aggregierten Berichte werden anhand dieser Rollen nach Standorten gruppiert.
+min_aggregation_input#:#Minimale Anzahl für Aggregationen
+min_aggregation_input_info#:#Für die aggregierten Berichte werden nur Standorte berücksichtigt die mindestens die mindestens diese Anzahl Stimmungserfassungen aufweist.
+mood_recs_head_user#:#Benutzer
+mood_recs_head_year#:#Jahr
+mood_recs_head_week#:#Kalenderwoche
+mood_recs_head_mood#:#Stimmung
+mood_recs_head_department#:#Standort
+filter_all_option#:#Alle
+superiors_only_filter#:#Nur Führungskräfte
+department_role_filter#:#Standort
+no_department_role#:#(Keine Standort Rolle)
+mood_recs_head_count#:#Anzahl

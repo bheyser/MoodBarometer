@@ -1,0 +1,33 @@
+<!-- language file start -->
+privacy_link#:#Privacy
+survey_link#:#Survey
+config_tab#:#Configuration
+report_tab#:#Report
+report_detailed_subtab#:#Mood Records
+report_aggregated_subtab#:#Aggregated Mood
+config_modified#:#Configuration has been modified.
+selection_freeze_input#:#Freeze First Mood Selection
+selection_freeze_input_info#:#This option causes the freeze of the first mood selection per week so that users cannot change this mood record.
+privacy_category_input#:#Privacy Category
+privacy_category_input_info#:#The selected category will be shown as privacy link to all users.
+privacy_category_select_advice#:#Please select the category that shows the privacy information.
+superiors_survey_input#:#Superiors Survey
+superiors_survey_input_info#:#The selected survey will be shown as survey link to all users that can be identified as superior.
+superiors_survey_select_advice#:#Please select the survey that is intended to be taken by superiors.
+superiors_role_input#:#Superiors Role
+superiors_role_input_info#:#A link to the configured superiors survey will be shown to the users of this role.
+superiors_role_invalid_alert#:#The entered role name does not relate to a valid global ILIAS role.
+department_roles_input#:#Department Roles
+department_roles_input_info#:#These roles are used for the aggregated reports that are grouped by departments.
+min_aggregation_input#:#Minimum Records for Aggregation
+min_aggregation_input_info#:#Aggregated reports will only consider departments that comes with the minimum of required records.
+mood_recs_head_year#:#Year
+mood_recs_head_week#:#Week
+mood_recs_head_user#:#User
+mood_recs_head_mood#:#Mood
+mood_recs_head_department#:#Department
+filter_all_option#:#All
+superiors_only_filter#:#Superiors Only
+department_role_filter#:#Department
+no_department_role#:#(No Department Role)
+mood_recs_head_count#:#Number

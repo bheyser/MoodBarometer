@@ -1,0 +1,35 @@
+<div class="ilFloatRight">
+    <div id="{MOOD_BAROMETER_ID}" class="collapse navbar-collapse mood-barometer">
+        <!-- BEGIN link -->
+        <div class="nav navbar-nav moodbar-item">
+            <a href="{LINK_HREF}" class="il_ContainerItemCommand">{LINK_TXT}</a>
+        </div>
+        <!-- END link -->
+        <!-- BEGIN mood -->
+        <div class="nav navbar-nav moodbar-item {MOOD_DISABLED}" data-type="moodInput" data-id="{MOOD_ID}">
+            <img src="{MOOD_IMG_SRC}" alt="{MOOD_IMG_SRC}"/>
+        </div>
+        <!-- END mood -->
+    </div>
+</div>
+<script type="text/javascript">
+(function($){
+
+    $().ready(function(){
+
+        var barometerId = '{MOOD_BAROMETER_ID}';
+        var moodId = '{SELECTED_MOOD_ID}';
+        var year = '{SELECTED_MOOD_ID}';
+        var week = '{SELECTED_MOOD_ID}';
+
+        var moodBarometer = $.fn.ilMoodBarometerEngine(barometerId, moodId, year, week, {
+            ajaxUrl: '{MOOD_BAROMETER_AJAX_URL}',
+            ajaxParam: '{MOOD_BAROMETER_AJAX_PARAM}',
+            freezeSelection: {MOOD_BAROMETER_SELECTION_FREEZE}
+        });
+
+        moodBarometer.init();
+    });
+
+}(jQuery));
+</script>

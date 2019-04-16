@@ -1,0 +1,22 @@
+#mood_records_tbl img
+{
+    width: 25px;
+}
+
+#mood_barometer img
+{
+    width: 30px;
+    margin: 3px;
+}
+
+.moodbar-item[data-type=moodInput]
+{
+    margin-top: -14px !important;
+
+}
+
+.moodbar-item.disabled img
+{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
