@@ -115,9 +115,11 @@ class ilMoodRepository
 	 * @param $departmentRoleFilter
 	 * @return ilMoodMeanList
 	 */
-	public static function getFilteredMoodMeansByDepartmentList($yearFilter, $weekFilter, $superiorsFilter, $departmentRoleFilter)
+	public static function getFilteredMoodMeansByDepartmentList($minRecords, $yearFilter, $weekFilter, $superiorsFilter, $departmentRoleFilter)
 	{
 		$list = new ilMoodMeanList();
+		
+		$list->setMinimumGroupRecords($minRecords);
 		
 		$list->setYearFilter($yearFilter);
 		$list->setWeekFilter($weekFilter);

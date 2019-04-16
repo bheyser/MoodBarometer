@@ -18,6 +18,7 @@ class ilMoodBarometerMoodMeansTableGUI extends ilMoodBarometerAbstractTableGUI
 	protected function buildRecordList()
 	{
 		$list = ilMoodRepository::getFilteredMoodMeansByDepartmentList(
+			$this->plugin->getConfig()->getMinimumRecordAggregation(),
 			$this->getFilterItemByPostVar('year')->getValue(),
 			$this->getFilterItemByPostVar('week')->getValue(),
 			$this->getFilterItemByPostVar('superiors_only')->getChecked(),

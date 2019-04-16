@@ -15,6 +15,39 @@ class ilMoodMeanList implements  Iterator, ilMoodBarometerTableDataProvider
 	use ilMoodBarometerItemListTrait;
 	use ilMoodBarometerMoodFilterTrait;
 	
+	/**
+	 * @var int
+	 */
+	protected $minimumGroupRecords;
+	
+	/**
+	 * @return int
+	 */
+	public function getMinimumGroupRecords()
+	{
+		return $this->minimumGroupRecords;
+	}
+	
+	/**
+	 * @param int $minimumGroupRecords
+	 */
+	public function setMinimumGroupRecords($minimumGroupRecords)
+	{
+		$this->minimumGroupRecords = $minimumGroupRecords;
+	}
+	
+	protected function getHavingExpression()
+	{
+		global $DIC; /* @var ILIAS\DI\Container $DIC */
+		
+		if( $this->getMinimumGroupRecords() )
+		{
+			return 'HAVING COUNT(mood) >= '.$DIC->database()->quote($this->getMinimumGroupRecords(), 'integer');
+		}
+		
+		return '';
+	}
+	
 	public function load()
 	{
 		global $DIC; /* @var ILIAS\DI\Container $DIC */
@@ -24,6 +57,7 @@ class ilMoodMeanList implements  Iterator, ilMoodBarometerTableDataProvider
 			FROM moodbar_mood_records
 			WHERE {$this->getWhereExpression()}
 			GROUP BY department_role
+			{$this->getHavingExpression()}
 		");
 		
 		while($row = $DIC->database()->fetchAssoc($res))
