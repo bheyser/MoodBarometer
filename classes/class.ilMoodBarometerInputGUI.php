@@ -78,10 +78,7 @@ class ilMoodBarometerInputGUI
 	
 	public function getHTML()
 	{
-		global $DIC; /* @var ILIAS\DI\Container $DIC */
-		
-		$DIC->ui()->mainTemplate()->addCss($this->plugin->getStyleSheetLocation('mood_barometer.css'));
-		$DIC->ui()->mainTemplate()->addJavaScript($this->plugin->getStyleSheetLocation('mood_barometer.js'));
+		$this->addRessourcesToMainTemplate();
 		
 		$tpl = $this->plugin->getTemplate('tpl.mood_barometer_input.html');
 		
@@ -138,5 +135,19 @@ class ilMoodBarometerInputGUI
 	protected function buildAjaxUrl()
 	{
 		return $this->plugin->getDirectory().'/ajax.php';
+	}
+	
+	protected function addRessourcesToMainTemplate()
+	{
+		// the following is not working for learning modules
+		//global $DIC; /* @var ILIAS\DI\Container $DIC */
+		//$DIC->ui()->mainTemplate()->addCss($this->plugin->getStyleSheetLocation('mood_barometer.css'));
+		//$DIC->ui()->mainTemplate()->addJavaScript($this->plugin->getStyleSheetLocation('mood_barometer.js'));
+		
+		// learning module does re-init main template and replace the global only
+		// (tpl within ui-mainTemplate is not replaced)
+		
+		$GLOBALS['tpl']->addCss($this->plugin->getStyleSheetLocation('mood_barometer.css'));
+		$GLOBALS['tpl']->addJavaScript($this->plugin->getStyleSheetLocation('mood_barometer.js'));
 	}
 }
